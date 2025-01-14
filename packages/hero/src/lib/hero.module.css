@@ -1,7 +1,84 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+/* Stile base per la sezione Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    /* height: 100vh;  */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Tema chiaro */
+  .hero--light {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Tema scuro */
+  .hero--dark {
+    background-color: #333;
+    color: #f9f9f9;
+  }
+  
+  /* Contenuto centrale */
+  .content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Stile del titolo */
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Stile del sottotitolo */
+  .subtitle {
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
+  }
+  
+  /* Contenitore per elementi aggiuntivi (come pulsanti) */
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Responsività per schermi piccoli */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 36px;
+    }
+  
+    .subtitle {
+      font-size: 18px;
+    }
+  
+    .actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 28px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .actions {
+      width: 100%; /* Pulsanti al 100% della larghezza */
+    }
+  }
+  
