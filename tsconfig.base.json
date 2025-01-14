@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@albanese-ui/button": ["packages/button/src/index.ts"]
+      "@albanese-ui/button": ["packages/button/src/index.ts"],
+      "@albanese-ui/header": ["packages/header/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
