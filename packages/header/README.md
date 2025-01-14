@@ -48,8 +48,6 @@ export default App;
 |            |                     |             | - **`dark`**: tema scuro con sfondo scuro e testo chiaro.                                       |
 | `children` | `React.ReactNode`   | `null`      | Elementi opzionali da aggiungere accanto al titolo, come pulsanti, icone o menu di navigazione.  |
 
-
-
 ## Personalizzazione
 
 Il componente utilizza un file CSS Module (`header.module.css`) per garantire uno stile isolato e personalizzabile.
