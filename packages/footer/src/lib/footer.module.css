@@ -1,0 +1,62 @@
+/* Stile base del footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Tema chiaro */
+.footer--light {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Tema scuro */
+.footer--dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+/* Stile del testo */
+.text {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenitore per elementi opzionali */
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Comportamento responsive */
+@media (max-width: 360px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+
+    .text {
+        margin-bottom: 10px;
+    }
+}
