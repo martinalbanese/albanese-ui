@@ -17,6 +17,7 @@
     "paths": {
       "@albanese-ui/button": ["packages/button/src/index.ts"],
       "@albanese-ui/footer": ["packages/footer/src/index.ts"],
+      "@albanese-ui/grid": ["packages/grid/src/index.ts"],
       "@albanese-ui/header": ["packages/header/src/index.ts"],
       "@albanese-ui/hero": ["packages/hero/src/index.ts"],
       "@albanese-ui/navbar": ["packages/navbar/src/index.ts"]
