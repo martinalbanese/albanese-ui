@@ -1,7 +1,82 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+/* Stile base per la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
+    position: sticky; /* Posizionamento sticky */
+    top: 0; /* Si attacca in cima quando la pagina viene scrollata */
+    z-index: 10; /* Assicurati che la navbar sia sopra gli altri contenuti */
+  }
+  
+  /* Tema chiaro */
+  .navbar--light {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Tema scuro */
+  .navbar--dark {
+    background-color: #333;
+    color: #f9f9f9;
+  }
+  
+  /* Lista dei link */
+  .links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centra i link */
+    flex-grow: 1; /* Fa sì che la lista dei link occupi lo spazio disponibile */
+  }
+  
+  /* Singolo link */
+  .link a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  .link a:hover {
+    color: #007bff;
+  }
+  
+  /* Contenitore per elementi aggiuntivi (es. pulsanti) */
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Comportamento responsive */
+  @media (max-width: 768px) {
+    .links {
+      display: none; /* Nasconde i link su schermi piccoli */
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .actions {
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 8px 16px;
+    }
+  
+    .link a {
+      font-size: 14px;
+    }
+  }
+  
