@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './navbar.module.css';
 
 /**
@@ -20,15 +20,28 @@ type NavbarProps = {
 }
 
 export function Navbar({ links, children, theme = 'light' }: NavbarProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(prevState => !prevState);
+
   return (
     <nav className={`${styles.navbar} ${styles[`navbar--${theme}`]}`}>
-      <ul className={styles.links}>
+
+      {/* Icona hamburger per schermi piccoli */}
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </div>
+
+      <ul className={`${styles.links} ${isMenuOpen ? styles.show : ''}`}>
         {links.map((link, index) => (
           <li key={index} className={styles.link}>
             <a href={`#${link.toLowerCase()}`}>{link}</a>
           </li>
         ))}
       </ul>
+
       <div className={styles.actions}>{children}</div>
     </nav>
   );

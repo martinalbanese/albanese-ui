@@ -8,9 +8,9 @@
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Arial', sans-serif;
-    position: sticky; /* Posizionamento sticky */
-    top: 0; /* Si attacca in cima quando la pagina viene scrollata */
-    z-index: 10; /* Assicurati che la navbar sia sopra gli altri contenuti */
+    position: sticky;
+    top: 0; 
+    z-index: 10; 
   }
   
   /* Tema chiaro */
@@ -32,8 +32,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: center; /* Centra i link */
-    flex-grow: 1; /* Fa sì che la lista dei link occupi lo spazio disponibile */
+    justify-content: center;
+    flex-grow: 1; 
   }
   
   /* Singolo link */
@@ -53,23 +53,57 @@
     gap: 10px;
   }
   
+  /* Icona hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
   /* Comportamento responsive */
   @media (max-width: 768px) {
     .links {
-      display: none; /* Nasconde i link su schermi piccoli */
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #f9f9f9;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  
+    .links.show {
+      display: flex; 
     }
   
     .navbar {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
   
     .actions {
       margin-top: 10px;
-      justify-content: flex-start;
+      justify-content: center;
+    }
+  
+    .hamburger {
+      display: flex; 
+      
     }
   }
   
+  /* Riduzioni di stile per dispositivi molto piccoli */
   @media (max-width: 480px) {
     .navbar {
       padding: 8px 16px;
