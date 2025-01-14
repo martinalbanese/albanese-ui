@@ -1,0 +1,116 @@
+/* Stile base per la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
+    position: sticky;
+    top: 0; 
+    z-index: 10; 
+  }
+  
+  /* Tema chiaro */
+  .navbar--light {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Tema scuro */
+  .navbar--dark {
+    background-color: #333;
+    color: #f9f9f9;
+  }
+  
+  /* Lista dei link */
+  .links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-grow: 1; 
+  }
+  
+  /* Singolo link */
+  .link a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  .link a:hover {
+    color: #007bff;
+  }
+  
+  /* Contenitore per elementi aggiuntivi (es. pulsanti) */
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Icona hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* Comportamento responsive */
+  @media (max-width: 768px) {
+    .links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #f9f9f9;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  
+    .links.show {
+      display: flex; 
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .actions {
+      margin-top: 10px;
+      justify-content: center;
+    }
+  
+    .hamburger {
+      display: flex; 
+      
+    }
+  }
+  
+  /* Riduzioni di stile per dispositivi molto piccoli */
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 8px 16px;
+    }
+  
+    .link a {
+      font-size: 14px;
+    }
+  }
+  
