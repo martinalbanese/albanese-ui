@@ -1,0 +1,46 @@
+/* grid.module.css */
+
+/* Stile base per il contenitore della griglia */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* width: 100%;  */
+    grid-gap: 20px; 
+    padding: 20px;
+  }
+  
+  /* Grid item - gli elementi all'interno della griglia */
+  .grid > * {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .grid > *:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Griglia con 3 colonne per schermi di dimensioni medie e superiori */
+@media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  /* Griglia con 2 colonne per schermi più piccoli */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  /* Griglia con 1 colonna per schermi molto piccoli */
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
