@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@albanese-ui/button": ["packages/button/src/index.ts"],
+      "@albanese-ui/card": ["packages/card/src/index.ts"],
       "@albanese-ui/footer": ["packages/footer/src/index.ts"],
       "@albanese-ui/grid": ["packages/grid/src/index.ts"],
       "@albanese-ui/header": ["packages/header/src/index.ts"],

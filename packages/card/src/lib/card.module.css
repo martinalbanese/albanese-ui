@@ -1,0 +1,61 @@
+/* Stile di base per la card */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Stili per il titolo */
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: inherit;
+  }
+  
+  /* Stili per la descrizione */
+  .description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Tema chiaro per la card */
+  .card--light {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  /* Tema scuro per la card */
+  .card--dark {
+    background-color: #333;
+    color: #f9f9f9;
+    border: 1px solid #444;
+  }
+  
+  .card--dark .description {
+    color: #ccc;
+  }
+  
+  .card--dark .title {
+    color: #f9f9f9;
+  }
+  
+  /* Hover per tema chiaro */
+  .card--light:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover per tema scuro */
+  .card--dark:hover {
+    background-color: #444;
+  }
+  
