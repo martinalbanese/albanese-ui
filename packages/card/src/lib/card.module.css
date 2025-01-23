@@ -1,6 +1,8 @@
 /* Stile di base per la card */
 .card {
-    background-color: #fff;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -10,6 +12,13 @@
   
   .card:hover {
     transform: translateY(-10px);
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
   }
   
   /* Stili per il titolo */
@@ -31,7 +40,7 @@
   .card--light {
     background-color: #fff;
     color: #333;
-    border: 1px solid #ddd;
+    border: 2px solid #ffcad4;
   }
   
   /* Tema scuro per la card */
@@ -57,5 +66,15 @@
   /* Hover per tema scuro */
   .card--dark:hover {
     background-color: #444;
+  }
+
+  @media (max-width: 768px){
+    .img {
+      max-width: 80%;
+    }
+
+    .card {
+      max-width: 90%;
+    }
   }
   
