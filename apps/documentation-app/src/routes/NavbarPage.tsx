@@ -1,15 +1,13 @@
 import styles from "./routes.module.css";
 
-function ButtonPage() {
+function NavbarPage() {
     return (
         <>
             <div className={styles.container}>
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Componente Button</h2>
+                    <h2 className={styles["section-title"]}>Componente Navbar</h2>
                     <p>
-                        Button è un componente riutilizzabile per pulsanti, progettato per essere flessibile e altamente personalizzabile.
-                        <br />
-                        Supporta tre varianti principali di stile (solid, outline, ghost) e consente di definire facilmente azioni tramite l'attributo onClick.
+                        Il componente Navbar è un elemento riutilizzabile per creare una barra di navigazione personalizzabile. Supporta un elenco di link di navigazione, azioni aggiuntive come pulsanti o menu a discesa e vari temi (chiaro o scuro).
                     </p>
                 </section>
                 <section className={styles.section}>
@@ -18,7 +16,7 @@ function ButtonPage() {
                         Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
                     </p>
                     <pre className={styles["code-block"]}>
-                        <code>npm install @albanese-ui/button</code>
+                        <code>npm install @albanese-ui/navbar</code>
                     </pre>
                 </section>
 
@@ -26,29 +24,30 @@ function ButtonPage() {
                     <h2 className={styles["section-title"]}>Importazione</h2>
                     <p>Puoi importare il componente direttamente nel tuo progetto:</p>
                     <pre className={styles["code-block"]}>
-                        <code>import {"{ Button }"} from '@albanese-ui/button';</code>
+                        <code>import {"{ Navbar }"} from '@albanese-ui/navbar';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
                     <h2 className={styles["section-title"]}>Come utilizzare il componente</h2>
                     <p>
-                        Ecco un esempio base di utilizzo del componente <code>Button</code>:
+                        Ecco un esempio base di utilizzo del componente <code>Navbar</code>:
                     </p>
                     <pre className={styles["code-block"]}>
                         <code>
-                            {`import { Button } from '@albanese-ui/button';
+                            {`import { Navbar } from '@albanese-ui/navbar';
 
 function App() {
-    const handleClick = () => {
-        console.log('Pulsante cliccato!');
-    };
+  const links = ['Home', 'About', 'Services', 'Contact'];
 
-    return (
-        <div>
-            <Button label="Clicca qui" variant="solid" onClick={handleClick} />
-        </div>
-    );
+  return (
+    <div>
+      <Navbar links={links} theme="light">
+        <Button label="Login" variant="outline" />
+        <Button label="Sign Up" />
+      </Navbar>
+    </div>
+  );
 }
 
 export default App;`}
@@ -59,7 +58,7 @@ export default App;`}
                 <section className={styles.section}>
                     <h2 className={styles["section-title"]}>Proprietà del componente</h2>
                     <p>
-                        Il componente <code>Button</code> supporta le seguenti props:
+                        Il componente <code>Navbar</code> supporta le seguenti props:
                     </p>
                     <table className={styles["props-table"]}>
                         <thead>
@@ -72,29 +71,28 @@ export default App;`}
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>label</code></td>
-                                <td><code>string</code></td>
+                                <td><code>links</code></td>
+                                <td><code>string[]</code></td>
                                 <td>-</td>
-                                <td>Testo visualizzato all'interno del pulsante.</td>
+                                <td>Un array di stringhe che rappresentano i nomi dei collegamenti di navigazione.</td>
                             </tr>
                             <tr>
-                                <td><code>variant</code></td>
-                                <td><code>'solid' | 'outline' | 'ghost'</code></td>
-                                <td>'solid'</td>
+                                <td><code>theme</code></td>
+                                <td><code>'light' | 'dark'</code></td>
+                                <td>'light'</td>
                                 <td>
-                                    La variante di stile del pulsante:
+                                    La variante di stile del footer:
                                     <ul>
-                                        <li><b>solid</b>: pulsante pieno con sfondo colorato (default).</li>
-                                        <li><b>outline</b>: pulsante con bordo colorato e sfondo trasparente.</li>
-                                        <li><b>ghost</b>: pulsante completamente trasparente con solo il testo colorato.</li>
+                                        <li><b>light</b>: tema chiaro con sfondo chiaro e testo scuro (default).</li>
+                                        <li><b>dark</b>: tema scuro con sfondo scuro e testo chiaro.</li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td><code>onClick</code></td>
-                                <td><code>() =`{'>'}` void</code></td>
+                                <td><code>children</code></td>
+                                <td><code>React.ReactNode</code></td>
                                 <td>null</td>
-                                <td>Funzione eseguita quando il pulsante viene cliccato.</td>
+                                <td>Elementi opzionali da aggiungere sulla destra della navbar, come pulsanti o icone.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -103,7 +101,7 @@ export default App;`}
                 <section className={styles.section}>
                     <h2 className={styles["section-title"]}>Personalizzazione</h2>
                     <p>
-                        Gli stili del pulsante possono essere modificati personalizzando il file CSS Module associato al componente: <code>button.module.css</code>.
+                        Gli stili possono essere personalizzati modificando il file CSS Module associato al componente <code>navbar.module.css</code>.
                     </p>
                 </section>
             </div>
@@ -111,4 +109,4 @@ export default App;`}
     );
 }
 
-export default ButtonPage;
+export default NavbarPage;

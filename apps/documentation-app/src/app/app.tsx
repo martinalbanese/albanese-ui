@@ -7,7 +7,7 @@ import { Navbar } from '@albanese-ui/navbar';
 import { Grid } from '@albanese-ui/grid';
 import { Card } from '@albanese-ui/card';
 
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router-dom'
 
 export function App() {
   const links = ['Home', 'About', 'Services', 'Contact'];

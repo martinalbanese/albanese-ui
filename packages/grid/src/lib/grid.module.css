@@ -7,10 +7,11 @@
     gap: 20px; 
     padding: 20px;
     box-sizing: border-box;
+    justify-items: center;
   }
   
   /* Grid item - gli elementi all'interno della griglia */
-  .grid > * {
+  /* .grid > * {
     background-color: #f9f9f9;
     padding: 15px;
     border: 1px solid #ddd;
@@ -22,7 +23,7 @@
   .grid > *:hover {
     transform: scale(1.05);
   }
-  
+   */
   /* Griglia con 3 colonne per schermi di dimensioni medie e superiori */
 @media (min-width: 768px) {
     .grid {
