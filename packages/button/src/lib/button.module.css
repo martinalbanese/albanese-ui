@@ -13,29 +13,33 @@
 
 /* Variante solid (default) */
 .button--solid {
-    background-color: #007bff;
+    background-color: #ff5d8f;
     color: white;
+}
+
+.button--solid:hover {
+    background-color: #ff709b;
 }
 
 /* Variante outline: pulsante con contorno */
 .button--outline {
     background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: #ff5d8f;
+    border: 2px solid #ff5d8f;
 }
 
 .button--outline:hover {
-    background-color: #007bff !important;
+    background-color: #ff5d8f !important;
     color: white !important;
 }
 
 /* Variante ghost: pulsante trasparente */
 .button--ghost {
     background-color: transparent;
-    color: #007bff;
+    color: #ff5d8f;
     border: none;
 }
 
 .button--ghost:hover {
-    background-color: rgba(0, 123, 255, 0.1) !important; 
+    background-color: #fddde3 !important; 
 }

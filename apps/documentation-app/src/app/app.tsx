@@ -6,18 +6,24 @@ import { Hero } from '@albanese-ui/hero';
 import { Navbar } from '@albanese-ui/navbar';
 import { Grid } from '@albanese-ui/grid';
 import { Card } from '@albanese-ui/card';
+import buttonImg from '../../public/button.webp'
+import footerImg from '../../public/footer.webp'
+import headerImg from '../../public/header.webp'
+import heroImg from '../../public/hero.webp'
+import navbarImg from '../../public/navbar.webp'
+import gridImg from '../../public/grid.webp'
 
 export function App() {
   const links = ['Home', 'About', 'Services', 'Contact'];
 
   // Lista dei componenti con i relativi dettagli
   const components = [
-    { title: 'Button', description: 'Un pulsante versatile e personalizzabile per le tue interfacce.' },
-    { title: 'Footer', description: 'Un footer minimalista per le tue applicazioni web.' },
-    { title: 'Header', description: 'Un header completo di titolo e contenuti aggiuntivi.' },
-    { title: 'Hero', description: 'Un componente Hero per evidenziare contenuti principali.' },
-    { title: 'Navbar', description: 'Una barra di navigazione flessibile e responsive.' },
-    { title: 'Grid', description: 'Un layout a griglia altamente personalizzabile per organizzare i contenuti.' },
+    { img: buttonImg, title: 'Button', description: 'Un pulsante versatile e personalizzabile per le tue interfacce.' },
+    { img: footerImg, title: 'Footer', description: 'Un footer minimalista per le tue applicazioni web.' },
+    { img: headerImg, title: 'Header', description: 'Un header completo di titolo e contenuti aggiuntivi.' },
+    { img: heroImg, title: 'Hero', description: 'Un componente Hero per evidenziare contenuti principali.' },
+    { img: navbarImg, title: 'Navbar', description: 'Una barra di navigazione flessibile e responsive.' },
+    { img: gridImg, title: 'Grid', description: 'Un layout a griglia altamente personalizzabile per organizzare i contenuti.' },
   ];
 
   return (
@@ -40,11 +46,12 @@ export function App() {
 
       {/* Griglia dei componenti */}
       <div style={{ padding: '50px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Componenti disponibili</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '20px', fontSize: '30px' }}>Componenti disponibili</h2>
         <Grid columns={3} gap={20}>
           {components.map((component, index) => (
             <Card
               key={index}
+              img={component.img}
               title={component.title}
               description={component.description}
               theme="light" // Cambia in "dark" se vuoi uno stile scuro
