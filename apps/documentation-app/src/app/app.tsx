@@ -1,33 +1,22 @@
-import React from 'react';
-import { Button } from '@albanese-ui/button';
-import { Footer } from '@albanese-ui/footer';
-import { Header } from '@albanese-ui/header';
-import { Hero } from '@albanese-ui/hero';
-import { Navbar } from '@albanese-ui/navbar';
-import { Grid } from '@albanese-ui/grid';
-import { Card } from '@albanese-ui/card';
-
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom';
+import styles from './app.module.css';
 
 export function App() {
-  const links = ['Home', 'About', 'Services', 'Contact'];
-
   return (
-    <>
-      <Header title="albanese-ui">
-        <Button label="Login" variant="outline" />
-        <Button label="Sign Up" />
-      </Header>
+    <div className={styles.container}>
+      {/* Navbar */}
+      <nav className={styles.navbar}>
+        <h1 className={styles.logo}>albanese-ui</h1>
+        <div className={styles.navLinks}>
+          <Link to="/" className={styles.link}>Home</Link>
+          <Link to="/docs" className={styles.link}>Installazione</Link>
+          <Link to="/docs/components" className={styles.link}>Componenti</Link>
+        </div>
+      </nav>
 
-      <Navbar links={links} />
-
+      {/* Outlet */}
       <Outlet />
-
-      <Footer text="© 2025 Albanese UI">
-        <Button label="Privacy Policy" variant="ghost" />
-        <Button label="Contacts" variant="ghost" />
-      </Footer>
-    </>
+    </div>
   );
 }
 

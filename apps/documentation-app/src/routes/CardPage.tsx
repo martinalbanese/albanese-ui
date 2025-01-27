@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../app/app.module.css";
 
-function NavbarPage() {
+function CardPage() {
     const navigate = useNavigate();
     return (
         <>
@@ -13,22 +13,22 @@ function NavbarPage() {
             </div>
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Navbar</h2>
+                    <h2 className={styles.sectionTitle}>Componente Card</h2>
                     <p>
-                        Il componente Navbar è un elemento riutilizzabile per creare una barra di navigazione personalizzabile.
+                        Il componente Card è utilizzato per creare un contenitore visivamente distintivo per contenuti come immagini, titoli, descrizioni, e azioni come pulsanti.
                     </p>
                 </section>
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Installazione</h2>
                     <pre className={styles.codeBlock}>
-                        <code>npm install @albanese-ui/navbar</code>
+                        <code>npm install @albanese-ui/card</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Importazione</h2>
                     <pre className={styles.codeBlock}>
-                        <code>import {"{ Navbar }"} from '@albanese-ui/navbar';</code>
+                        <code>import {"{ Card }"} from '@albanese-ui/card';</code>
                     </pre>
                 </section>
 
@@ -36,17 +36,17 @@ function NavbarPage() {
                     <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
                     <pre className={styles.codeBlock}>
                         <code>
-                            {`import { Navbar } from '@albanese-ui/navbar';
+                            {`import { Card } from '@albanese-ui/card';
 
 function App() {
-  const links = ['Home', 'About', 'Services', 'Contact'];
-
   return (
     <div>
-      <Navbar links={links} theme="light">
-        <Button label="Login" variant="outline" />
-        <Button label="Sign Up" />
-      </Navbar>
+      <Card 
+        title="Card Title"
+        description="This is a description of the card content."
+        imageUrl="https://example.com/image.jpg"
+        buttonLabel="Learn More"
+      />
     </div>
   );
 }
@@ -69,22 +69,28 @@ export default App;`}
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>links</code></td>
-                                <td><code>string[]</code></td>
+                                <td><code>title</code></td>
+                                <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Un array di stringhe che rappresentano i collegamenti di navigazione.</td>
+                                <td>Il titolo da visualizzare nella card.</td>
                             </tr>
                             <tr>
-                                <td><code>theme</code></td>
-                                <td><code>'light' | 'dark'</code></td>
-                                <td>'light'</td>
-                                <td>La variante di stile della navbar.</td>
+                                <td><code>description</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>Una breve descrizione del contenuto della card.</td>
                             </tr>
                             <tr>
-                                <td><code>children</code></td>
-                                <td><code>React.ReactNode</code></td>
-                                <td>null</td>
-                                <td>Elementi opzionali da aggiungere alla navbar, come pulsanti o icone.</td>
+                                <td><code>imageUrl</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>URL dell'immagine da visualizzare nella card.</td>
+                            </tr>
+                            <tr>
+                                <td><code>buttonLabel</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>Etichetta del pulsante nella card.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -93,7 +99,7 @@ export default App;`}
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Personalizzazione</h2>
                     <p>
-                        Gli stili possono essere personalizzati modificando il file CSS Module associato al componente <code>navbar.module.css</code>.
+                        Gli stili possono essere personalizzati modificando il file CSS Module associato al componente <code>card.module.css</code>.
                     </p>
                 </section>
             </div>
@@ -101,4 +107,4 @@ export default App;`}
     );
 }
 
-export default NavbarPage;
+export default CardPage;
