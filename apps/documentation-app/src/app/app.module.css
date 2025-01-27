@@ -1,0 +1,468 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    color: #333;
+}
+
+/* General Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a202c, #2d3748);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.875rem; 
+    font-weight: bold;
+    color: #f6ad55;
+    letter-spacing: 0.05em;
+}
+
+.navLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.link {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #f6ad55;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    text-align: center;
+    width: 100%;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f6ad55;
+    margin-bottom: 24px;
+}
+
+.heroSubtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.ctaPrimary {
+    padding: 12px 24px;
+    background-color: #f6ad55;
+    color: #1a202c;
+    font-size: 1.125rem; /* lg */
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.ctaPrimary:hover {
+    background-color: #fbd38d;
+}
+
+.ctaSecondary {
+    padding: 12px 24px;
+    background-color: #4a5568;
+    color: white;
+    font-size: 1.125rem; /* lg */
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.ctaSecondary:hover {
+    background-color: #2d3748;
+}
+
+/* Sidebar Menu */
+.sideMenu {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 250px;
+    min-height: 100vh;
+    background-color: #2d3748;
+    color: white;
+    padding-top: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.menuCategory {
+    margin-bottom: 30px;
+}
+
+.menuCategory h3 {
+    color: #fbd38d;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.menuCategory ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.menuCategory ul li {
+    margin-bottom: 12px;
+}
+
+.menuCategory ul li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menuCategory ul li a:hover {
+    color: #f6ad55;
+}
+
+/* Content Section */
+.content {
+    margin-left: 250px; 
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.content a {
+    color: #f6ad55;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .sideMenu {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+/* Back Button */
+.backButtonContainer {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.backButton {
+    background-color: #4a5568;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.backButton:hover {
+    background-color: #2d3748;
+}
+
+/* Installation Page */
+.installationContainer {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: none;
+    color: white;
+    width: 100%;
+}
+
+.installationTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f6ad55;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.installationSubtitle {
+    font-size: 18px;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.installationSteps {
+    list-style: none;
+    padding: 0;
+}
+
+.step {
+    margin-bottom: 40px;
+}
+
+.stepTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f6ad55;
+}
+
+.stepDescription {
+    font-size: 16px;
+    color: #e2e8f0;
+    margin-bottom: 10px;
+}
+
+.codeBlock {
+    background-color: #1a202c;
+    color: #fbd38d;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    border-left: 4px solid #f6ad55;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Code block styling to mimic terminal */
+.codeBlock::before {
+    content: "bash";
+    display: block;
+    font-size: 12px;
+    color: #a0aec0;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 36px;
+    }
+
+    .heroSubtitle {
+        font-size: 16px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .installationTitle {
+        font-size: 28px;
+    }
+
+    .installationSubtitle {
+        font-size: 16px;
+    }
+}
+
+/* Components Page */
+.componentsPage {
+    padding: 2rem;
+    text-align: center;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #f6ad55;
+}
+
+.componentsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.componentCard {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+.componentCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.componentLink {
+    text-decoration: none !important;
+}
+
+.componentLink:hover {
+    text-decoration: none !important;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.componentImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 1rem;
+}
+
+.componentTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f6ad55;
+    margin-bottom: 1rem;
+}
+
+.componentDescription {
+    color: #fff;
+}
+
+.componentCard:hover .viewCodeWrapper {
+    display: block;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .componentCard {
+        width: 100%;
+    }
+
+    .componentTitle {
+        font-size: 1rem;
+    }
+}
+
+/* Container principale per la pagina */
+.pageContainer {
+    padding: 20px;
+}
+
+/* Sezione e stile per ogni titolo */
+.section {
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f6ad55;
+    margin-bottom: 10px;
+}
+
+/* Stile del blocco di codice */
+.codeBlock {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-x: auto;
+}
+
+code {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tabella delle proprietà */
+.propsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.propsTable th,
+.propsTable td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+.propsTable th {
+    background-color: #586a8a;
+    font-weight: bold;
+}
+
+.propsTable td {
+    background-color: transparent;
+}
+
+/* Estilo per le liste all'interno delle celle */
+.propsTable ul {
+    padding-left: 20px;
+}
+
+/* Modifiche per il link che potrebbe apparire nel blocco di codice */
+code a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+code a:hover {
+    color: #3498db;
+}

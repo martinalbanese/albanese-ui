@@ -10,6 +10,10 @@ import GridPage from './routes/GridPage';
 import HeaderPage from './routes/HeaderPage';
 import HeroPage from './routes/HeroPage';
 import NavbarPage from './routes/NavbarPage';
+import GetStartedPage from './routes/GetStartedPage';
+import SideMenuPage from './routes/SideMenuPage';
+import ComponentsPage from './routes/ComponentsPage';
+import CardPage from './routes/CardPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,18 +24,19 @@ root.render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<HomePage />} />
-          
-          <Route path='button' element={<ButtonPage />} />
-          <Route path='footer' element={<FooterPage />} />
-          <Route path='grid' element={<GridPage />} />
-          <Route path='header' element={<HeaderPage />} />
-          <Route path='hero' element={<HeroPage />} />
-          <Route path='navbar' element={<NavbarPage />} />
+          <Route path='/docs' element={<SideMenuPage />}>
+            <Route index element={<GetStartedPage />} />
+            <Route path='components' element={<ComponentsPage />} />
+            <Route path='components/button' element={<ButtonPage />} />
+            <Route path='components/card' element={<CardPage />} />
+            <Route path='components/grid' element={<GridPage />} />
+            <Route path='components/footer' element={<FooterPage />} />
+            <Route path='components/header' element={<HeaderPage />} />
+            <Route path='components/hero' element={<HeroPage />} />
+            <Route path='components/navbar' element={<NavbarPage />} />
+          </Route>
         </Route>
-
-
       </Routes>
-
     </BrowserRouter>
 
   </StrictMode>

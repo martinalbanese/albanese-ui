@@ -1,39 +1,49 @@
-import styles from "./routes.module.css";
+import { useNavigate } from "react-router-dom";
+import styles from "../app/app.module.css";
 
 function FooterPage() {
+    const navigate = useNavigate();
     return (
         <>
-            <div className={styles.container}>
+            {/* Back Button */}
+            <div className={styles.backButtonContainer}>
+                <button onClick={() => navigate(-1)} className={styles.backButton}>
+                    Back
+                </button>
+            </div>
+
+            <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Componente Footer</h2>
+                    <h2 className={styles.sectionTitle}>Componente Footer</h2>
                     <p>
-                    Il componente Footer è un elemento riutilizzabile che crea un footer fisso in fondo alla pagina. <br/> Supporta temi chiaro e scuro e può includere contenuti aggiuntivi come link, bottoni o altre icone. È progettato per essere flessibile e completamente personalizzabile.
+                        Il componente Footer è un elemento riutilizzabile che crea un footer fisso in fondo alla pagina. <br /> Supporta temi chiaro e scuro e può includere contenuti aggiuntivi come link, bottoni o altre icone. È progettato per essere flessibile e completamente personalizzabile.
                     </p>
                 </section>
+
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installazione</h2>
                     <p>
                         Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
                     </p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/footer</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Importazione</h2>
+                    <h2 className={styles.sectionTitle}>Importazione</h2>
                     <p>Puoi importare il componente direttamente nel tuo progetto:</p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>import {"{ Footer }"} from '@albanese-ui/footer';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
                     <p>
                         Ecco un esempio base di utilizzo del componente <code>Footer</code>:
                     </p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>
                             {`import { Footer } from '@albanese-ui/footer';
 
@@ -59,11 +69,11 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
                     <p>
                         Il componente <code>Footer</code> supporta le seguenti props:
                     </p>
-                    <table className={styles["props-table"]}>
+                    <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
@@ -102,7 +112,7 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
                     <p>
                         Gli stili del footer possono essere modificati personalizzando il file CSS Module associato al componente: <code>footer.module.css</code>.
                     </p>
