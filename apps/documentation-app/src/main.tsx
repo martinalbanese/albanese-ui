@@ -20,6 +20,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<HomePage />} />
+          
           <Route path='button' element={<ButtonPage />} />
           <Route path='footer' element={<FooterPage />} />
           <Route path='grid' element={<GridPage />} />
