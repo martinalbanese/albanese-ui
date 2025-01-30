@@ -5,7 +5,7 @@ run-name: ${{ github.actor }} is running the build, test, and publish workflow
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
