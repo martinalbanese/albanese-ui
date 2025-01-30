@@ -85,6 +85,9 @@ jobs:
       - name: Verify npm installation
         run: pnpm --version
 
-      - name: Run publix
+      - name: Authenticate to npm
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Run publish
         run: pnpm exec nx run-many --target=nx-release-publish
    
