@@ -1,0 +1,70 @@
+name: Build and Test
+
+run-name: ${{ github. actor }} is running the builf and test workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Inserire il nome della branch
+        required: true
+      slot:
+        description: Inserire il numero di slot
+        required: true
+
+  push:
+    branches:
+      - master
+
+  pull-request:
+    branches:
+      - master
+
+jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+      - run: pnpm install
+
+      - name: Run build
+      - run: pnpm build
+  
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+      - run: pnpm install
+
+      - name: Run tests
+      - run: pnpm test
+
+  publish:
+    needs: build
+    run-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/head/master'
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+      - run: pnpm install
+
+      - name: Build packages
+      - run: pnpm build
+
+      - name: Authenticate with npm
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secret.NODE_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to npm
+        run: pnpm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_TOKEN }}
+
