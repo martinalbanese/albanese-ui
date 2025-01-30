@@ -1,24 +1,24 @@
-name: Build and Test
+name: Build, Test and Publish
 
 run-name: ${{ github. actor }} is running the builf and test workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: Inserire il nome della branch
-        required: true
-      slot:
-        description: Inserire il numero di slot
-        required: true
+  # workflow_dispatch:
+  #   inputs:
+  #     branch:
+  #       description: Inserire il nome della branch
+  #       required: true
+  #     slot:
+  #       description: Inserire il numero di slot
+  #       required: true
 
   push:
     branches:
       - master
 
-  pull-request:
-    branches:
-      - master
+  # pull-request:
+  #   branches:
+  #     - master
 
 jobs:
   build:
