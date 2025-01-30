@@ -89,5 +89,5 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Run publish
-        run: pnpm exec nx run-many --target=nx-release-publish --access=public
+        run: pnpm exec nx affected --target=nx-release-publish --access=public
    
