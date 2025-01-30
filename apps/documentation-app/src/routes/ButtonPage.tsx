@@ -1,41 +1,51 @@
-import styles from "./routes.module.css";
+import { useNavigate } from "react-router-dom";
+import styles from "../app/app.module.css";
 
 function ButtonPage() {
+    const navigate = useNavigate();
     return (
         <>
-            <div className={styles.container}>
+            {/* Back Button */}
+            <div className={styles.backButtonContainer}>
+                <button onClick={() => navigate(-1)} className={styles.backButton}>
+                    Back
+                </button>
+            </div>
+
+            <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Componente Button</h2>
+                    <h2 className={styles.sectionTitle}>Componente Button</h2>
                     <p>
                         Button è un componente riutilizzabile per pulsanti, progettato per essere flessibile e altamente personalizzabile.
                         <br />
                         Supporta tre varianti principali di stile (solid, outline, ghost) e consente di definire facilmente azioni tramite l'attributo onClick.
                     </p>
                 </section>
+
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installazione</h2>
                     <p>
                         Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
                     </p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/button</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Importazione</h2>
+                    <h2 className={styles.sectionTitle}>Importazione</h2>
                     <p>Puoi importare il componente direttamente nel tuo progetto:</p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>import {"{ Button }"} from '@albanese-ui/button';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
                     <p>
                         Ecco un esempio base di utilizzo del componente <code>Button</code>:
                     </p>
-                    <pre className={styles["code-block"]}>
+                    <pre className={styles.codeBlock}>
                         <code>
                             {`import { Button } from '@albanese-ui/button';
 
@@ -57,11 +67,11 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
                     <p>
                         Il componente <code>Button</code> supporta le seguenti props:
                     </p>
-                    <table className={styles["props-table"]}>
+                    <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
@@ -92,7 +102,7 @@ export default App;`}
                             </tr>
                             <tr>
                                 <td><code>onClick</code></td>
-                                <td><code>() =`{'>'}` void</code></td>
+                                <td><code>() =&gt; void</code></td>
                                 <td>null</td>
                                 <td>Funzione eseguita quando il pulsante viene cliccato.</td>
                             </tr>
@@ -101,7 +111,7 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles["section-title"]}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
                     <p>
                         Gli stili del pulsante possono essere modificati personalizzando il file CSS Module associato al componente: <code>button.module.css</code>.
                     </p>
