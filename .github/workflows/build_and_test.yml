@@ -19,14 +19,20 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install pnpm
+        uses: pnpm/actions-setup@v2
+        with:
+          version: 9
+          run_install: false
+
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Verify npm installation
-        run: npm --version
+        run: pnpm --version
 
       - name: Run build
-        run: npx nx run-many --target=build
+        run: pnpm exec run-many --target=build
 
   test:
     needs: build
@@ -36,7 +42,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Run tests
-        run: npm test
+        run: pnpm test
