@@ -32,7 +32,7 @@ jobs:
         run: pnpm --version
 
       - name: Run build
-        run: pnpm exec run-many --target=build
+        run: pnpm exec nx run-many --target=build
 
   test:
     needs: build
