@@ -12,28 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Install dependencies
-      -  run: pnpm install
+        run: pnpm install
 
       - name: Verify pnpm installation
-      - run: pnpm --version
+        run: pnpm --version
 
       - name: Run build
-      - run: pnpm build
-  
+        run: pnpm build
+
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Install dependencies
-      - run: pnpm install
+        run: pnpm install
 
       - name: Run tests
-      - run: pnpm test
-
- 
+        run: pnpm test
