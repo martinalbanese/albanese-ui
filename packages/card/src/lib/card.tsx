@@ -1,4 +1,3 @@
-// import { Link } from 'react-router';
 import { Link } from 'react-router-dom';
 import styles from './card.module.css';
 
@@ -22,3 +21,5 @@ export function Card({ img, title, description, route, theme = 'light' }: CardPr
 
   );
 }
+
+export default Card;

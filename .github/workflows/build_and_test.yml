@@ -58,5 +58,5 @@ jobs:
       - name: Verify npm installation
         run: pnpm --version
 
-      - name: Run build
+      - name: Run tests
         run: pnpm exec nx run-many --target=test
