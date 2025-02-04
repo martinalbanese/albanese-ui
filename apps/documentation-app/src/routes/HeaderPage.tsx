@@ -13,16 +13,16 @@ function HeaderPage() {
             </div>
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Header</h2>
+                    <h2 className={styles.sectionTitle}>Header Component</h2>
                     <p>
-                        Header è un componente riutilizzabile per creare un'intestazione flessibile e personalizzabile, progettato per visualizzare il titolo di un'applicazione con un'area dedicata ad elementi aggiuntivi come pulsanti o icone. Supporta due varianti di tema: light e dark.
+                        The Header is a reusable component to create a flexible and customizable header, designed to display the title of an application with an area dedicated to additional elements such as buttons or icons. It supports two theme variants: light and dark.
                     </p>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installation</h2>
                     <p>
-                        Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
+                        To use the component in your application, install the library with the following command:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/header</code>
@@ -30,17 +30,17 @@ function HeaderPage() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Importazione</h2>
-                    <p>Puoi importare il componente direttamente nel tuo progetto:</p>
+                    <h2 className={styles.sectionTitle}>Import</h2>
+                    <p>You can import the component directly into your project:</p>
                     <pre className={styles.codeBlock}>
                         <code>import {"{ Header }"} from '@albanese-ui/header';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>How to use the component</h2>
                     <p>
-                        Ecco un esempio base di utilizzo del componente <code>Header</code>:
+                        Here’s a basic example of using the <code>Header</code> component:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>
@@ -48,7 +48,7 @@ function HeaderPage() {
 
 function App() {
   return (
-    <Header title="Nome Applicazione" theme="light">
+    <Header title="App Name" theme="light">
       <Button label="Login" variant="outline" />
       <Button label="Sign Up" />
     </Header>
@@ -61,17 +61,17 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Component Properties</h2>
                     <p>
-                        Il componente <code>Header</code> supporta le seguenti props:
+                        The <code>Header</code> component supports the following props:
                     </p>
                     <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
-                                <th>Tipo</th>
+                                <th>Type</th>
                                 <th>Default</th>
-                                <th>Descrizione</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,28 +79,28 @@ export default App;`}
                                 <td><code>title</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Il titolo da visualizzare nell'intestazione.</td>
+                                <td>The title to display in the header.</td>
                             </tr>
                             <tr>
                                 <td><code>theme</code></td>
                                 <td><code>'light' | 'dark'</code></td>
                                 <td>'light'</td>
-                                <td>La variante di stile dell'intestazione (light o dark).</td>
+                                <td>The style variant of the header (light or dark).</td>
                             </tr>
                             <tr>
                                 <td><code>children</code></td>
                                 <td><code>React.ReactNode</code></td>
                                 <td>null</td>
-                                <td>Elementi opzionali da aggiungere accanto al titolo (es. bottoni o link).</td>
+                                <td>Optional elements to add next to the title (e.g. buttons or links).</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Customization</h2>
                     <p>
-                        Puoi personalizzare gli stili modificando il file CSS associato, <code>header.module.css</code>, o utilizzare classi personalizzate.
+                        You can customize the styles by modifying the associated CSS file, <code>header.module.css</code>, or by using custom classes.
                     </p>
                 </section>
             </div>

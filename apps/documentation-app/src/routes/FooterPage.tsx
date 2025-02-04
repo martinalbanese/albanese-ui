@@ -14,16 +14,18 @@ function FooterPage() {
 
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Footer</h2>
+                    <h2 className={styles.sectionTitle}>Footer Component</h2>
                     <p>
-                        Il componente Footer è un elemento riutilizzabile che crea un footer fisso in fondo alla pagina. <br /> Supporta temi chiaro e scuro e può includere contenuti aggiuntivi come link, bottoni o altre icone. È progettato per essere flessibile e completamente personalizzabile.
+                        The Footer component is a reusable element that creates a fixed footer at the bottom of the page. <br />
+                        It supports light and dark themes and can include additional content such as links, buttons, or other icons.
+                        It is designed to be flexible and fully customizable.
                     </p>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installation</h2>
                     <p>
-                        Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
+                        To use the component in your application, install the library with the following command:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/footer</code>
@@ -31,17 +33,17 @@ function FooterPage() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Importazione</h2>
-                    <p>Puoi importare il componente direttamente nel tuo progetto:</p>
+                    <h2 className={styles.sectionTitle}>Import</h2>
+                    <p>You can import the component directly into your project:</p>
                     <pre className={styles.codeBlock}>
                         <code>import {"{ Footer }"} from '@albanese-ui/footer';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>How to Use the Component</h2>
                     <p>
-                        Ecco un esempio base di utilizzo del componente <code>Footer</code>:
+                        Here is a basic example of how to use the <code>Footer</code> component:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>
@@ -51,13 +53,13 @@ function App() {
   return (
     <div className="app-container">
       <div>
-        {/* Contenuto principale dell'app */}
-        <h1>Benvenuti in Albanese UI!</h1>
-        <p>Questo è il contenuto della pagina.</p>
+        {/* Main content of the app */}
+        <h1>Welcome to Albanese UI!</h1>
+        <p>This is the page content.</p>
       </div>
       <Footer text="© 2025 Albanese UI">
         <Button label="Privacy Policy" variant="ghost" />
-        <Button label="Contattaci" variant="ghost" />
+        <Button label="Contact Us" variant="ghost" />
       </Footer>
     </div>
   );
@@ -69,17 +71,17 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Component Properties</h2>
                     <p>
-                        Il componente <code>Footer</code> supporta le seguenti props:
+                        The <code>Footer</code> component supports the following props:
                     </p>
                     <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
-                                <th>Tipo</th>
+                                <th>Type</th>
                                 <th>Default</th>
-                                <th>Descrizione</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,17 +89,17 @@ export default App;`}
                                 <td><code>text</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Testo principale da visualizzare nel footer.</td>
+                                <td>Main text to display in the footer.</td>
                             </tr>
                             <tr>
                                 <td><code>theme</code></td>
                                 <td><code>'light' | 'dark'</code></td>
                                 <td>'light'</td>
                                 <td>
-                                    La variante di stile del footer:
+                                    The footer style variant:
                                     <ul>
-                                        <li><b>light</b>: tema chiaro con sfondo chiaro e testo scuro (default).</li>
-                                        <li><b>dark</b>: tema scuro con sfondo scuro e testo chiaro.</li>
+                                        <li><b>light</b>: light theme with a light background and dark text (default).</li>
+                                        <li><b>dark</b>: dark theme with a dark background and light text.</li>
                                     </ul>
                                 </td>
                             </tr>
@@ -105,16 +107,16 @@ export default App;`}
                                 <td><code>children</code></td>
                                 <td><code>React.ReactNode</code></td>
                                 <td>null</td>
-                                <td>Elementi opzionali da aggiungere accanto o sotto il testo del footer, come pulsanti o link.</td>
+                                <td>Optional elements to add next to or below the footer text, such as buttons or links.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Customization</h2>
                     <p>
-                        Gli stili del footer possono essere modificati personalizzando il file CSS Module associato al componente: <code>footer.module.css</code>.
+                        The footer styles can be modified by customizing the CSS Module file associated with the component: <code>footer.module.css</code>.
                     </p>
                 </section>
             </div>

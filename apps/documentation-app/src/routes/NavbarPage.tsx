@@ -13,27 +13,27 @@ function NavbarPage() {
             </div>
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Navbar</h2>
+                    <h2 className={styles.sectionTitle}>Navbar Component</h2>
                     <p>
-                        Il componente Navbar è un elemento riutilizzabile per creare una barra di navigazione personalizzabile.
+                        The Navbar component is a reusable element to create a customizable navigation bar.
                     </p>
                 </section>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installation</h2>
                     <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/navbar</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Importazione</h2>
+                    <h2 className={styles.sectionTitle}>Import</h2>
                     <pre className={styles.codeBlock}>
                         <code>import {"{ Navbar }"} from '@albanese-ui/navbar';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>How to Use the Component</h2>
                     <pre className={styles.codeBlock}>
                         <code>
                             {`import { Navbar } from '@albanese-ui/navbar';
@@ -57,14 +57,14 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Component Properties</h2>
                     <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
-                                <th>Tipo</th>
+                                <th>Type</th>
                                 <th>Default</th>
-                                <th>Descrizione</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,28 +72,28 @@ export default App;`}
                                 <td><code>links</code></td>
                                 <td><code>string[]</code></td>
                                 <td>-</td>
-                                <td>Un array di stringhe che rappresentano i collegamenti di navigazione.</td>
+                                <td>An array of strings representing the navigation links.</td>
                             </tr>
                             <tr>
                                 <td><code>theme</code></td>
                                 <td><code>'light' | 'dark'</code></td>
                                 <td>'light'</td>
-                                <td>La variante di stile della navbar.</td>
+                                <td>The style variant of the navbar.</td>
                             </tr>
                             <tr>
                                 <td><code>children</code></td>
                                 <td><code>React.ReactNode</code></td>
                                 <td>null</td>
-                                <td>Elementi opzionali da aggiungere alla navbar, come pulsanti o icone.</td>
+                                <td>Optional elements to add to the navbar, such as buttons or icons.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Customization</h2>
                     <p>
-                        Gli stili possono essere personalizzati modificando il file CSS Module associato al componente <code>navbar.module.css</code>.
+                        Styles can be customized by modifying the associated CSS Module file <code>navbar.module.css</code>.
                     </p>
                 </section>
             </div>

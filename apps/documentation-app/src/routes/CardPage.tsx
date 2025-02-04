@@ -13,27 +13,27 @@ function CardPage() {
             </div>
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Card</h2>
+                    <h2 className={styles.sectionTitle}>Card Component</h2>
                     <p>
-                        Il componente Card è utilizzato per creare un contenitore visivamente distintivo per contenuti come immagini, titoli, descrizioni, e azioni come pulsanti.
+                        The Card component is used to create a visually distinctive container for content such as images, titles, descriptions, and actions like buttons.
                     </p>
                 </section>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installation</h2>
                     <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/card</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Importazione</h2>
+                    <h2 className={styles.sectionTitle}>Import</h2>
                     <pre className={styles.codeBlock}>
                         <code>import {"{ Card }"} from '@albanese-ui/card';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>How to Use the Component</h2>
                     <pre className={styles.codeBlock}>
                         <code>
                             {`import { Card } from '@albanese-ui/card';
@@ -57,14 +57,14 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Component Properties</h2>
                     <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
-                                <th>Tipo</th>
+                                <th>Type</th>
                                 <th>Default</th>
-                                <th>Descrizione</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,34 +72,34 @@ export default App;`}
                                 <td><code>title</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Il titolo da visualizzare nella card.</td>
+                                <td>The title displayed in the card.</td>
                             </tr>
                             <tr>
                                 <td><code>description</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Una breve descrizione del contenuto della card.</td>
+                                <td>A brief description of the card content.</td>
                             </tr>
                             <tr>
                                 <td><code>imageUrl</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>URL dell'immagine da visualizzare nella card.</td>
+                                <td>URL of the image displayed in the card.</td>
                             </tr>
                             <tr>
                                 <td><code>buttonLabel</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Etichetta del pulsante nella card.</td>
+                                <td>Label of the button in the card.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Customization</h2>
                     <p>
-                        Gli stili possono essere personalizzati modificando il file CSS Module associato al componente <code>card.module.css</code>.
+                        The styles can be customized by modifying the CSS Module file associated with the component <code>card.module.css</code>.
                     </p>
                 </section>
             </div>

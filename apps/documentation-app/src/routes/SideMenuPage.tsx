@@ -8,16 +8,16 @@ export function SideMenuPage() {
                 {/* Sidebar Menu */}
                 <div className={styles.sideMenu}>
                     <div className={styles.menuCategory}>
-                        <h3>Panoramica</h3>
+                        <h3>Overview</h3>
                         <ul>
-                            <li className={styles.link}><Link to='/docs'>Installazione</Link></li>
+                            <li className={styles.link}><Link to='/docs'>Installation</Link></li>
                         </ul>
                     </div>
                     <div className={styles.menuCategory}>
-                        <h3>Componenti</h3>
+                        <h3>Components</h3>
                         <ul>
-                            {/* Qui i percorsi sono relativi per restare nella stessa sezione */}
-                            <li className={styles.link}><Link to='/docs/components'>Tutti i componenti</Link></li>
+                            {/* The paths here are relative to stay within the same section */}
+                            <li className={styles.link}><Link to='/docs/components'>All Components</Link></li>
                             <li className={styles.link}><Link to='/docs/components/button'>Button</Link></li>
                             <li className={styles.link}><Link to='/docs/components/card'>Card</Link></li>
                             <li className={styles.link}><Link to='/docs/components/grid'>Grid</Link></li>

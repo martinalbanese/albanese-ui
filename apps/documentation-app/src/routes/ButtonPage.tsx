@@ -14,18 +14,18 @@ function ButtonPage() {
 
             <div className={styles.pageContainer}>
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Componente Button</h2>
+                    <h2 className={styles.sectionTitle}>Button Component</h2>
                     <p>
-                        Button è un componente riutilizzabile per pulsanti, progettato per essere flessibile e altamente personalizzabile.
+                        Button is a reusable button component, designed to be flexible and highly customizable.
                         <br />
-                        Supporta tre varianti principali di stile (solid, outline, ghost) e consente di definire facilmente azioni tramite l'attributo onClick.
+                        It supports three main style variants (solid, outline, ghost) and allows easy action definition via the onClick attribute.
                     </p>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Installazione</h2>
+                    <h2 className={styles.sectionTitle}>Installation</h2>
                     <p>
-                        Per utilizzare il componente nella tua applicazione, installa la libreria con il seguente comando:
+                        To use the component in your application, install the library with the following command:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>npm install @albanese-ui/button</code>
@@ -33,17 +33,17 @@ function ButtonPage() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Importazione</h2>
-                    <p>Puoi importare il componente direttamente nel tuo progetto:</p>
+                    <h2 className={styles.sectionTitle}>Import</h2>
+                    <p>You can import the component directly into your project:</p>
                     <pre className={styles.codeBlock}>
                         <code>import {"{ Button }"} from '@albanese-ui/button';</code>
                     </pre>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Come utilizzare il componente</h2>
+                    <h2 className={styles.sectionTitle}>How to Use the Component</h2>
                     <p>
-                        Ecco un esempio base di utilizzo del componente <code>Button</code>:
+                        Here is a basic example of how to use the <code>Button</code> component:
                     </p>
                     <pre className={styles.codeBlock}>
                         <code>
@@ -51,12 +51,12 @@ function ButtonPage() {
 
 function App() {
     const handleClick = () => {
-        console.log('Pulsante cliccato!');
+        console.log('Button clicked!');
     };
 
     return (
         <div>
-            <Button label="Clicca qui" variant="solid" onClick={handleClick} />
+            <Button label="Click here" variant="solid" onClick={handleClick} />
         </div>
     );
 }
@@ -67,17 +67,17 @@ export default App;`}
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Proprietà del componente</h2>
+                    <h2 className={styles.sectionTitle}>Component Properties</h2>
                     <p>
-                        Il componente <code>Button</code> supporta le seguenti props:
+                        The <code>Button</code> component supports the following props:
                     </p>
                     <table className={styles.propsTable}>
                         <thead>
                             <tr>
                                 <th>Prop</th>
-                                <th>Tipo</th>
+                                <th>Type</th>
                                 <th>Default</th>
-                                <th>Descrizione</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,18 +85,18 @@ export default App;`}
                                 <td><code>label</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>Testo visualizzato all'interno del pulsante.</td>
+                                <td>Text displayed inside the button.</td>
                             </tr>
                             <tr>
                                 <td><code>variant</code></td>
                                 <td><code>'solid' | 'outline' | 'ghost'</code></td>
                                 <td>'solid'</td>
                                 <td>
-                                    La variante di stile del pulsante:
+                                    The style variant of the button:
                                     <ul>
-                                        <li><b>solid</b>: pulsante pieno con sfondo colorato (default).</li>
-                                        <li><b>outline</b>: pulsante con bordo colorato e sfondo trasparente.</li>
-                                        <li><b>ghost</b>: pulsante completamente trasparente con solo il testo colorato.</li>
+                                        <li><b>solid</b>: filled button with a colored background (default).</li>
+                                        <li><b>outline</b>: button with a colored border and transparent background.</li>
+                                        <li><b>ghost</b>: fully transparent button with only colored text.</li>
                                     </ul>
                                 </td>
                             </tr>
@@ -104,16 +104,16 @@ export default App;`}
                                 <td><code>onClick</code></td>
                                 <td><code>() =&gt; void</code></td>
                                 <td>null</td>
-                                <td>Funzione eseguita quando il pulsante viene cliccato.</td>
+                                <td>Function executed when the button is clicked.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Personalizzazione</h2>
+                    <h2 className={styles.sectionTitle}>Customization</h2>
                     <p>
-                        Gli stili del pulsante possono essere modificati personalizzando il file CSS Module associato al componente: <code>button.module.css</code>.
+                        The button styles can be modified by customizing the CSS Module file associated with the component: <code>button.module.css</code>.
                     </p>
                 </section>
             </div>

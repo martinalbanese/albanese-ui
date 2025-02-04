@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from "../app/app.module.css";
 
-// Immagini per ogni componente
+// Images for each component
 import buttonImg from '/button.webp';
 import cardImg from '/card.webp';
 import gridImg from '/grid.webp';
@@ -15,13 +15,13 @@ function ComponentsPage() {
     const navigate = useNavigate();
 
     const components = [
-        { img: buttonImg, title: 'Button', description: 'Un pulsante versatile e personalizzabile per le tue interfacce.', route: '/docs/components/button' },
-        { img: cardImg, title: 'Card', description: 'Una card personalizzabile per visualizzare i tuoi contenuti', route: '/docs/components/card' },
-        { img: footerImg, title: 'Footer', description: 'Un footer minimalista per le tue applicazioni web.', route: '/docs/components/footer' },
-        { img: gridImg, title: 'Grid', description: 'Un layout a griglia altamente personalizzabile per organizzare i contenuti.', route: '/docs/components/grid' },
-        { img: headerImg, title: 'Header', description: 'Un header completo di titolo e contenuti aggiuntivi.', route: '/docs/components/header' },
-        { img: heroImg, title: 'Hero', description: 'Un componente Hero per evidenziare contenuti principali.', route: '/docs/components/hero' },
-        { img: navbarImg, title: 'Navbar', description: 'Una barra di navigazione flessibile e responsive.', route: '/docs/components/navbar' },
+        { img: buttonImg, title: 'Button', description: 'A versatile and customizable button for your interfaces.', route: '/docs/components/button' },
+        { img: cardImg, title: 'Card', description: 'A customizable card to display your content.', route: '/docs/components/card' },
+        { img: footerImg, title: 'Footer', description: 'A minimalist footer for your web applications.', route: '/docs/components/footer' },
+        { img: gridImg, title: 'Grid', description: 'A highly customizable grid layout to organize content.', route: '/docs/components/grid' },
+        { img: headerImg, title: 'Header', description: 'A header complete with title and additional content.', route: '/docs/components/header' },
+        { img: heroImg, title: 'Hero', description: 'A Hero component to highlight main content.', route: '/docs/components/hero' },
+        { img: navbarImg, title: 'Navbar', description: 'A flexible and responsive navigation bar.', route: '/docs/components/navbar' },
     ];
 
     return (
@@ -34,7 +34,7 @@ function ComponentsPage() {
             </div>
 
             <div className={styles.componentsPage}>
-                <h1 className={styles.pageTitle}>Componenti disponibili</h1>
+                <h1 className={styles.pageTitle}>Available Components</h1>
                 <div className={styles.componentsGrid}>
                     {components.map((component, index) => (
                         <figure key={index} className={styles.componentCard}>
@@ -45,11 +45,7 @@ function ComponentsPage() {
                                 <div className={styles.cardContent}>
                                     <h3 className={styles.componentTitle}>{component.title}</h3>
                                     <p className={styles.componentDescription}>{component.description}</p>
-                                    {/* <div className={styles.viewCodeWrapper}>
-                                    <Link to={component.route} className={styles.viewCode}>Vedi codice &lt;/&gt;</Link>
-                                </div> */}
                                 </div>
-
                             </Link>
                         </figure>
                     ))}

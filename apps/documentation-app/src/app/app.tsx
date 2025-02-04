@@ -9,8 +9,8 @@ export function App() {
         <h1 className={styles.logo}>albanese-ui</h1>
         <div className={styles.navLinks}>
           <Link to="/" className={styles.link}>Home</Link>
-          <Link to="/docs" className={styles.link}>Installazione</Link>
-          <Link to="/docs/components" className={styles.link}>Componenti</Link>
+          <Link to="/docs" className={styles.link}>Docs</Link>
+          <Link to="/docs/components" className={styles.link}>Components</Link>
         </div>
       </nav>
 

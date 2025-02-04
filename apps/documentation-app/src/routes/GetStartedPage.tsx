@@ -15,34 +15,34 @@ function GetStartedPage() {
       
       {/* Installation Content */}
       <main className={styles.installationContainer}>
-        <h1 className={styles.installationTitle}>Installazione di albanese-ui</h1>
+        <h1 className={styles.installationTitle}>Installation of albanese-ui</h1>
         <p className={styles.installationSubtitle}>
-          Segui questi semplici passaggi per aggiungere la libreria al tuo progetto.
+          Follow these simple steps to add the library to your project.
         </p>
         <ol className={styles.installationSteps}>
           <li className={styles.step}>
-            <h2 className={styles.stepTitle}>1. Installa la libreria</h2>
+            <h2 className={styles.stepTitle}>1. Install the library</h2>
             <p className={styles.stepDescription}>
-              Esegui il seguente comando nel terminale per installare albanese-ui tramite npm:
+              Run the following command in the terminal to install albanese-ui via npm:
             </p>
             <pre className={styles.codeBlock}>npm install albanese-ui</pre>
           </li>
           <li className={styles.step}>
-            <h2 className={styles.stepTitle}>2. Importa lo stile</h2>
+            <h2 className={styles.stepTitle}>2. Import the stylesheet</h2>
             <p className={styles.stepDescription}>
-              Aggiungi il file CSS principale nel tuo progetto:
+              Add the main CSS file to your project:
             </p>
             <pre className={styles.codeBlock}>import 'albanese-ui/dist/styles.css';</pre>
           </li>
           <li className={styles.step}>
-            <h2 className={styles.stepTitle}>3. Usa i componenti</h2>
+            <h2 className={styles.stepTitle}>3. Use the components</h2>
             <p className={styles.stepDescription}>
-              Ora puoi iniziare a utilizzare i componenti albanese-ui. Ecco un esempio:
+              Now you can start using albanese-ui components. Here’s an example:
             </p>
             <pre className={styles.codeBlock}>{`import { Button } from 'albanese-ui';
 
 function App() {
-    return <Button label="Clicca qui" />;
+    return <Button label="Click here" />;
 }`}</pre>
           </li>
         </ol>
